@@ -55,7 +55,6 @@ document.getElementById('fille4').addEventListener('load', function () {
 
 
 // game1
-
 var score = 0;
 var scoreDisplay = document.getElementById('score');
 var moles = document.getElementsByClassName('mole');
@@ -66,6 +65,9 @@ var playButton = document.getElementById('playButton');
 var pauseButton = document.getElementById('pauseButton');
 var isPaused = false;
 var textScore = document.getElementById('text_saka');
+var vitesse = document.getElementById('text_vitesse');
+var interval = 1500;
+vitesse.textContent = 'Hafainganam-pandeha : ' + (interval / 1000) + 'seconds';
 
 function randomMole() {
   var randomIndex = Math.floor(Math.random() * moles.length);
@@ -80,10 +82,12 @@ function showMole() {
       scoreDisplay.textContent = score;
       if (score < 0) {
         textScore.textContent = 'Lasako ny sakanao !!!';
+        scoreDisplay.style.backgroundColor = 'red';
       } else if (score == 0) {
         textScore.textContent = 'TSY MANANA SAKA IANAO !!';
       } else {
         textScore.textContent = 'SAKA AZONAO';
+        scoreDisplay.style.backgroundColor = 'green';
       }
     }
     currentMole.classList.remove('caught');
@@ -95,7 +99,7 @@ function showMole() {
   moleTimeout = setTimeout(function() {
     currentMole.classList.remove('active');
     showMole();
-  }, 1500);
+  }, interval);
 }
 
 function increaseScore() {
@@ -104,10 +108,17 @@ function increaseScore() {
   currentMole.classList.add('caught');
   if (score < 0) {
     textScore.textContent = 'Lasako ny sakanao !!!';
+    scoreDisplay.style.backgroundColor = 'red';
   } else if (score == 0) {
     textScore.textContent = 'TSY MANANA SAKA IANAO !!';
   } else {
     textScore.textContent = 'SAKA AZONAO';
+    scoreDisplay.style.backgroundColor = 'green';
+  }
+
+  if (score > 10 && score % 10 === 0) {
+    interval -= 200;
+    vitesse.textContent = 'Hafainganam-pandeha : ' + (interval / 1000) + 'seconds';
   }
 }
 
@@ -115,6 +126,7 @@ function startGame() {
   score = 0;
   scoreDisplay.textContent = score;
   clearTimeout(moleTimeout);
+  interval = 1500;
   showMole();
 }
 
@@ -152,6 +164,7 @@ for (var i = 0; i < moles.length; i++) {
     }
   });
 }
+
 
 
 closeModalBtn.addEventListener('click', function (e) {
