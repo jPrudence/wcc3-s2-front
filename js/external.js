@@ -111,16 +111,6 @@ function increaseScore() {
   }
 }
 
-function showModal() {
-  modalVisible = true;
-  // Code to display the modal
-}
-
-function hideModal() {
-  modalVisible = false;
-  // Code to hide the modal
-}
-
 function startGame() {
   score = 0;
   scoreDisplay.textContent = score;
