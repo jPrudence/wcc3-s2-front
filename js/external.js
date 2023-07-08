@@ -4,7 +4,6 @@ var modal = document.getElementById('modal');
 
 
 closeModalBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
     modal.style.display = 'none';
 });
 
@@ -18,10 +17,6 @@ document.getElementById('fille1').addEventListener('load', function () {
     fille1.addEventListener('click', function () {
         modal.style.display = 'block';
     });
-
-    // fille1.addEventListener("mouseover", function () {
-    //     alert("Hey, je t'avais dit de ne pas me toucher !")
-    // });
 })
 
 
@@ -32,12 +27,9 @@ document.getElementById('fille2').addEventListener('load', function () {
 
     var fille2 = objectContent.getElementById('Calque_2');
     fille2.addEventListener('click', function () {
-        alert('Vous avez cliqué sur un élément dans le fichier importé!');
+        modal.style.display = 'block';
     });
 
-    fille2.addEventListener("mouseover", function () {
-        alert("Hey, je t'avais dit de ne pas me toucher !")
-    });
 })
 
 // fille3
@@ -48,12 +40,9 @@ document.getElementById('fille3').addEventListener('load', function () {
 
     var fille3 = objectContent.getElementById('Calque_2');
     fille3.addEventListener('click', function () {
-        alert('Vous avez cliqué sur un élément dans le fichier importé!');
+        modal.style.display = 'block';
     });
 
-    fille3.addEventListener("mouseover", function () {
-        alert("Hey, je t'avais dit de ne pas me toucher !")
-    });
 });
 
 // fille4
@@ -64,11 +53,7 @@ document.getElementById('fille4').addEventListener('load', function () {
 
     var fille4 = objectContent.getElementById('Calque_2');
     fille4.addEventListener('click', function () {
-        alert('Vous avez cliqué sur un élément dans le fichier importé!');
-    });
-
-    fille4.addEventListener("mouseover", function () {
-        alert("Hey, je t'avais dit de ne pas me toucher !")
+        modal.style.display = 'block';
     });
 
 })
