@@ -12,9 +12,7 @@
       rel="stylesheet"
     />
 
-    <style>
- 
-    </style>
+    <style></style>
   </head>
   <body>
     <img
@@ -24,15 +22,50 @@
       class="background"
     />
 
-    <h1>
+    <svg width="100" height="100">
+      <circle
+        id="myCircle"
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="green"
+        stroke-width="4"
+        fill="yellow"
+      />
+    </svg>
+
+    <object width="300" id="fille1" class="fille fille1" data="assets/SVG/fille1.svg" type=""></object>
+    <object width="300" id="fille2" class="fille fille2" data="assets/SVG/fille2.svg" type=""></object>
+    <object width="300" id="fille3" class="fille fille3" data="assets/SVG/fille3.svg" type=""></object>
+    <object width="300" id="fille4" class="fille fille4" data="assets/SVG/fille4.svg" type=""></object>
+
+    <h1 id="title">
       <span>T</span>
       <span>I</span>
       <span>A</span>
-      <span>_</span>
+      &nbsp;
       <span>Z</span>
       <span>A</span>
       <span>Z</span>
       <span>A</span>
     </h1>
+
+    <!-- <div id="game1">
+        <h1>
+          LALAO VOALOHANY
+        </h1>
+    </div> -->
+
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1 id="modal-title">LALAO VOALOHANY</h1>
+      </div>
+    </div>
+ 
+
+    <script src="js/external.js">
+    </script>
   </body>
 </html>
