@@ -233,6 +233,7 @@ body {
     width: 80%;
     height: 80%;
     z-index: 100;
+    border-radius: 20px;
 }
 
 .close {
@@ -245,3 +246,66 @@ body {
     cursor: pointer;
     z-index: 200;
 }
+
+/* game1 */
+
+.game-container {
+    text-align: center;
+  }
+  
+  .moles-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .mole {
+    width: 140px;
+    height: 140px;
+    background-color: #e6ac00;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .mole > img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .mole:hover {
+    background-color: #ffcc00;
+  }
+  
+
+  .mole img {
+    display: none;
+  }
+  
+  .mole.active img {
+    display: block;
+  }
+  
+
+  #btn_div {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e6ac00;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
