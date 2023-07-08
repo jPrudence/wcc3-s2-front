@@ -67,7 +67,7 @@ var isPaused = false;
 var textScore = document.getElementById('text_saka');
 var vitesse = document.getElementById('text_vitesse');
 var interval = 1500;
-vitesse.textContent = 'Hafainganam-pandeha : ' + (interval / 1000) + 'seconds';
+vitesse.textContent = 'Hafainganam-pandeha : ' + (interval / 1000) + ' segondra';
 
 function randomMole() {
   var randomIndex = Math.floor(Math.random() * moles.length);
@@ -118,7 +118,7 @@ function increaseScore() {
 
   if (score > 10 && score % 10 === 0) {
     interval -= 200;
-    vitesse.textContent = 'Hafainganam-pandeha : ' + (interval / 1000) + 'seconds';
+    vitesse.textContent = 'Hafainganam-pandeha : ' + (interval / 1000) + ' segondra';
   }
 }
 
